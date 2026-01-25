@@ -1,0 +1,22 @@
+{
+    "Group": "ncode",
+    "Name": "ttt",
+    "Version": "0.1.0",
+    "Description": "An open version of Trouble in Terrorist Town for Hytale!",
+    "Authors": [
+        {
+            "Name": "josephkm"
+        }
+    ],
+    "Website": "ncode.ar",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "ar.ncode.plugin.TroubleInElfTownGameModePlugin",
+    "IncludesAssetPack": true
+}

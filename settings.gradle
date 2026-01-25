@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name "ultradevSnapshots"
+            url "https://mvn.ultradev.app/snapshots"
+        }
+    }
+}
+
+rootProject.name = 'ttt'
+

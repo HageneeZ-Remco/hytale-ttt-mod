@@ -1,0 +1,48 @@
+hud_current_role_preparing = Preparando
+hud_current_role_spectator = Espectador
+hud_current_role_innocent = Inocente
+hud_current_role_traitor = Traidor
+hud_current_role_detective = Detective
+
+scoreboard_title = Tabla de puntuaciones
+scoreboard_titles_player = Jugador
+scoreboard_titles_role = Rol
+scoreboard_titles_karma = Karma
+scoreboard_titles_kills = Asesinatos
+scoreboard_titles_deaths = Muertes
+scoreboard_titles_ping = Ping
+
+player_assigned_role_notification = Tu rol ahora es: {role}
+
+round_about_to_start_msg = ¡La ronda comenzará en {time} segundos!
+round_start_msg = ¡Comienza la ronda!
+round_traitors_win_msg = ¡Los traidores han ganado!
+round_innocents_win_msg = ¡Los inocentes han ganado!
+round_time_finished = ¡Se acabo el tiempo de la ronda!
+
+shop_title = Tienda de Equipamiento
+shop_credits = Créditos:
+shop_buy = Comprar
+shop_not_enough_credits = Sin créditos suficientes!
+shop_item_bought = Has comprado: {item_name}
+shop_no_space = No tienes espacio para este objeto!
+shop_close = Cerrar
+shop_only_for_traitors_or_detectives = ¡Solo traidores o detectives pueden usar la tienda!
+
+gravestone_plate_title = Aquí descansa
+gravestone_plate_player = Jugador:
+gravestone_plate_role = Rol:
+gravestone_plate_death_time = Hora de muerte:
+gravestone_plate_death_cause = Causa de muerte:
+gravestone_plate_report_death = Reportar muerte
+gravestone_plate_close = Cerrar
+
+dead_reason_physical = Golpes
+dead_reason_projectile = Proyectil
+dead_reason_command = La ira de los dioses
+dead_reason_drowning = Ahogado
+dead_reason_environment = Daño ambiental
+dead_reason_fall = Caida
+dead_reason_out_of_world = Salirse del mundo
+dead_reason_suffocation = Ahogado
+dead_reason_fire = Incinerado

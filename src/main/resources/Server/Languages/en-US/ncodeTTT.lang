@@ -1,0 +1,48 @@
+hud_current_role_preparing = Preparing
+hud_current_role_spectator = Spectator
+hud_current_role_innocent = Innocent
+hud_current_role_traitor = Traitor
+hud_current_role_detective = Detective
+
+scoreboard_title = Scoreboard
+scoreboard_titles_player = Player
+scoreboard_titles_role = Role
+scoreboard_titles_karma = Karma
+scoreboard_titles_kills = Kills
+scoreboard_titles_deaths = Deaths
+scoreboard_titles_ping = Ping
+
+player_assigned_role_notification = Your role now is: {role}
+
+round_about_to_start_msg = The round will start in {time} seconds!
+round_start_msg = The round has begun!
+round_traitors_win_msg = The traitors have won!
+round_innocents_win_msg = The innocents have won!
+round_time_finished = The round has no time left!
+
+shop_title = Equipment Shop
+shop_credits = Credits:
+shop_buy = Buy
+shop_not_enough_credits = Not enough credits!
+shop_item_bought = You have purchased: {item_name}
+shop_no_space = You have no space for this item!
+shop_close = Close
+shop_only_for_traitors_or_detectives = The shop is only for traitors or detectives!
+
+gravestone_plate_title = Here lies
+gravestone_plate_player = Player:
+gravestone_plate_role = Role:
+gravestone_plate_death_time = Time of death:
+gravestone_plate_death_cause = Cause of death:
+gravestone_plate_report_death = Report death
+gravestone_plate_close = Close
+
+dead_reason_physical = Blunt force
+dead_reason_projectile = Projectile
+dead_reason_command = The wrath of the gods
+dead_reason_drowning = Drowned
+dead_reason_environment = Environmental damage
+dead_reason_fall = Fall
+dead_reason_out_of_world = Fell out of the world
+dead_reason_suffocation = Suffocated
+dead_reason_fire = Incinerated
