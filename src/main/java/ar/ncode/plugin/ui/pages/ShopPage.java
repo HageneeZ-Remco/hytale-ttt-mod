@@ -99,6 +99,7 @@ public class ShopPage extends InteractiveCustomUIPage<ShopPage.ShopInteractionEv
 	) {
 		if (event == null || event.item == null) {
 			close();
+			return;
 		}
 
 		if (playerInfo.getCredits() <= 0) {
