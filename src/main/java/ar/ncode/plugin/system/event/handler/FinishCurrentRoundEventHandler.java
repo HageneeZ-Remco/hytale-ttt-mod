@@ -125,8 +125,11 @@ public class FinishCurrentRoundEventHandler implements Consumer<FinishCurrentRou
 				return;
 			}
 
-			executor.schedule(
-					() -> prepareNextRound(gameModeState, world),
+			executor.schedule(() -> {
+					// Check if world is still alive before executing (prevents memory leak from stale references)
+					if (!world.isAlive()) return;
+					prepareNextRound(gameModeState, world);
+				},
 					config.get().getTimeAfterRoundInSeconds(),
 					TimeUnit.SECONDS
 			);

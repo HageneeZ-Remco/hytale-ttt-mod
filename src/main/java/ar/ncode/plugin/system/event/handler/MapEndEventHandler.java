@@ -84,8 +84,11 @@ public class MapEndEventHandler implements Consumer<MapEndEvent> {
 				);
 			}
 
-			executor.schedule(
-					() -> endVotesAndChangeWorld(world),
+			executor.schedule(() -> {
+					// Check if world is still alive before executing (prevents memory leak from stale references)
+					if (!world.isAlive()) return;
+					endVotesAndChangeWorld(world);
+				},
 					config.get().getTimeToVoteMapInSeconds(),
 					TimeUnit.SECONDS
 			);
@@ -110,8 +113,11 @@ public class MapEndEventHandler implements Consumer<MapEndEvent> {
 				currentWorld.getEntityStore().getStore()
 		);
 
-		executor.schedule(
-				() -> ChangeWorldCommand.loadInstance(currentWorld, newWorldName),
+		executor.schedule(() -> {
+				// Check if world is still alive before executing (prevents memory leak from stale references)
+				if (!currentWorld.isAlive()) return;
+				ChangeWorldCommand.loadInstance(currentWorld, newWorldName);
+			},
 				config.get().getTimeBeforeChangingMapInSeconds(),
 				TimeUnit.SECONDS
 		);

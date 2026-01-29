@@ -232,8 +232,11 @@ public class StartNewRoundEventHandler implements Consumer<StartNewRoundEvent> {
 
 				gameModeStateForWorld.put(world.getWorldConfig().getUuid(), gameModeState);
 
-				executor.schedule(
-						() -> startNewRound(gameModeState, world),
+				executor.schedule(() -> {
+						// Check if world is still alive before executing (prevents memory leak from stale references)
+						if (!world.isAlive()) return;
+						startNewRound(gameModeState, world);
+					},
 						config.get().getTimeBeforeRoundInSeconds(),
 						TimeUnit.SECONDS
 				);
