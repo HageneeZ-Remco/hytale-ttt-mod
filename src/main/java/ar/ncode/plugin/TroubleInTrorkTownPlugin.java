@@ -75,6 +75,12 @@ public class TroubleInTrorkTownPlugin extends JavaPlugin {
 	 * when multiple players trigger transitions simultaneously.
 	 */
 	public static volatile boolean isWorldTransitionInProgress = false;
+
+	/**
+	 * Thread-safe set of player UUIDs who are spectators (dead).
+	 * Used by DeadChatListener to filter chat without accessing world thread.
+	 */
+	public static final java.util.Set<UUID> spectatorPlayers = java.util.concurrent.ConcurrentHashMap.newKeySet();
 	@SuppressWarnings("rawtypes")
 	private List<EventRegistration> events = new ArrayList<>();
 	private List<CommandRegistration> commands = new ArrayList<>();
