@@ -1,5 +1,5 @@
-hud_current_role_preparing = Preparing
-hud_current_role_spectator = Spectator
+hud_current_status_preparing = Preparing
+hud_current_status_spectator = Spectator
 hud_current_role_innocent = Innocent
 hud_current_role_traitor = Traitor
 hud_current_role_detective = Detective

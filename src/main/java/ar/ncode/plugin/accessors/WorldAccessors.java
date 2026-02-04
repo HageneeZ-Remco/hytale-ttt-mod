@@ -1,6 +1,7 @@
 package ar.ncode.plugin.accessors;
 
 import ar.ncode.plugin.component.PlayerGameModeInfo;
+import ar.ncode.plugin.model.GameModeState;
 import ar.ncode.plugin.model.PlayerComponents;
 import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentType;
@@ -11,9 +12,13 @@ import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore;
+import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
+
+import static ar.ncode.plugin.TroubleInTrorkTownPlugin.gameModeStateForWorld;
 
 public class WorldAccessors {
 
@@ -62,6 +67,15 @@ public class WorldAccessors {
 		return world.getWorldConfig().getDisplayName()
 				.replace(" ", "_")
 				.toLowerCase();
+	}
+
+	public static GameModeState gameModeStateForWorld(World world) {
+		return gameModeStateForWorld.get(world.getWorldConfig().getUuid());
+	}
+
+	public static GameModeState gameModeStateForPlayerWorld(Ref<EntityStore> player) {
+		UUID worldUUID = player.getStore().getExternalData().getWorld().getWorldConfig().getUuid();
+		return gameModeStateForWorld.get(worldUUID);
 	}
 
 

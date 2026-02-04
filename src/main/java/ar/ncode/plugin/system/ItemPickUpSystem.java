@@ -2,7 +2,6 @@ package ar.ncode.plugin.system;
 
 import ar.ncode.plugin.component.PlayerGameModeInfo;
 import ar.ncode.plugin.config.WeaponTypeConfig;
-import ar.ncode.plugin.model.enums.PlayerRole;
 import com.hypixel.hytale.component.ArchetypeChunk;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.Ref;
@@ -102,11 +101,11 @@ public class ItemPickUpSystem extends EntityTickingSystem<EntityStore> {
 			var isCurrentlyPreventingPickup = commandBuffer.getComponent(closest, PreventPickup.getComponentType()) != null;
 
 			try {
-				if (PlayerRole.SPECTATOR.equals(playerInfo.getRole()) && !isCurrentlyPreventingPickup) {
+				if (playerInfo.isSpectator() && !isCurrentlyPreventingPickup) {
 					commandBuffer.ensureComponent(itemRef, PreventPickup.getComponentType());
 					return;
 
-				} else if (PlayerRole.SPECTATOR.equals(playerInfo.getRole())) {
+				} else if (playerInfo.isSpectator()) {
 					return;
 				}
 

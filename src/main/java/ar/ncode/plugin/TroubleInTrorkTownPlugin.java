@@ -79,7 +79,6 @@ public class TroubleInTrorkTownPlugin extends JavaPlugin {
 	 * Used by DeadChatListener to filter chat without accessing world thread.
 	 */
 	private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-	public static Set<UUID> traitorPlayers = ConcurrentHashMap.newKeySet();
 	public static TroubleInTrorkTownPlugin instance;
 	public static Map<UUID, GameModeState> gameModeStateForWorld = new HashMap<>();
 	public static Config<CustomConfig> config;
