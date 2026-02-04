@@ -15,6 +15,7 @@ import ar.ncode.plugin.config.instance.InstanceConfig;
 import ar.ncode.plugin.config.loot.LootTables;
 import ar.ncode.plugin.interaction.PickUpWeaponInteraction;
 import ar.ncode.plugin.interaction.ShowDeadPlayerInteraction;
+import ar.ncode.plugin.interaction.TestPlayerRole;
 import ar.ncode.plugin.model.GameModeState;
 import ar.ncode.plugin.model.WorldPreview;
 import ar.ncode.plugin.packet.filter.GuiPacketsFilter;
@@ -149,6 +150,7 @@ public class TroubleInTrorkTownPlugin extends JavaPlugin {
 		commands.add(getCommandRegistry().registerCommand(new TraitorChatCommand()));
 
 		getCodecRegistry(Interaction.CODEC)
+				.register("test_player_role", TestPlayerRole.class, TestPlayerRole.CODEC)
 				.register("show_dead_player_info", ShowDeadPlayerInteraction.class, ShowDeadPlayerInteraction.CODEC)
 				.register("pickup_weapon_interaction", PickUpWeaponInteraction.class, PickUpWeaponInteraction.CODEC);
 
